@@ -1,0 +1,8 @@
+scripts/**
+node_modules/**
+preview/**
+.git/**
+.gitignore
+*.vsix
+images/**
+.github/**

@@ -1,0 +1,65 @@
+{
+  "name": "shikkaku",
+  "displayName": "Shikkaku",
+  "description": "Three themes inspired by Dazai: warm sand Agency, black and red Mafia, and a light Paper",
+  "version": "0.3.0",
+  "publisher": "t4zc4t",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t4zc4t/Shikkaku"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "warm",
+    "red",
+    "colorblind",
+    "dazai"
+  ],
+  "galleryBanner": {
+    "color": "#1e1915",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Shikkaku Agency",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shikkaku-agency-color-theme.json"
+      },
+      {
+        "label": "Shikkaku Mafia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shikkaku-mafia-color-theme.json"
+      },
+      {
+        "label": "Shikkaku Paper",
+        "uiTheme": "vs",
+        "path": "./themes/shikkaku-paper-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "contrast": "node scripts/contrast.js",
+    "cvd": "node scripts/cvd.js",
+    "check": "npm run contrast && npm run cvd",
+    "package": "npm run build && vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.1.0",
+    "ovsx": "^1.3.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.4"
+  }
+}
