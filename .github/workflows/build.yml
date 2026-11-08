@@ -44,7 +44,13 @@ jobs:
           name: shikkaku-vsix
       # notes are just the newest changelog section
       - run: awk '/^## /{n++} n==1' CHANGELOG.md > notes.md
-      - run: gh release create "$GITHUB_REF_NAME" *.vsix --title "$GITHUB_REF_NAME" --notes-file notes.md
+      # attach to the release if it was made on github, otherwise make it
+      - run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" *.vsix --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" *.vsix --title "$GITHUB_REF_NAME" --notes-file notes.md
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
 
