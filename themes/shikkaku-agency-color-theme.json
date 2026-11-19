@@ -1,7 +1,7 @@
 {
   "$schema": "vscode://schemas/color-theme",
   "name": "Shikkaku Agency",
-  "type": "#8fb5b1",
+  "type": "dark",
   "semanticHighlighting": true,
   "colors": {
     "focusBorder": "#c9a27399",
@@ -135,7 +135,7 @@
     "terminal.foreground": "#e6dac4",
     "terminalCursor.foreground": "#c9a273",
     "terminal.selectionBackground": "#4a3b2c",
-    "terminal.ansiBlack": "#262019",
+    "terminal.ansiBlack": "#5a4f42",
     "terminal.ansiRed": "#d36c57",
     "terminal.ansiGreen": "#a2b37d",
     "terminal.ansiYellow": "#ecbf6a",

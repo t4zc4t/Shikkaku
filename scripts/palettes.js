@@ -2,7 +2,7 @@
 
 const agency = {
   name: 'Shikkaku Agency',
-  type: 'dark',
+  kind: 'dark',
   // base, warm dark brown like an old office at night
   bg: '#1e1915',
   bgAlt: '#191511',
@@ -49,7 +49,7 @@ const agency = {
 
 const mafia = {
   name: 'Shikkaku Mafia',
-  type: 'dark',
+  kind: 'dark',
   // near-black with deep red, the port at night
   bg: '#131113',
   bgAlt: '#0f0d0f',
@@ -96,7 +96,7 @@ const mafia = {
 
 const paper = {
   name: 'Shikkaku Paper',
-  type: 'light',
+  kind: 'light',
   // the author's side, old manuscript paper and ink
   bg: '#f4ecdc',
   bgAlt: '#ece2cf',

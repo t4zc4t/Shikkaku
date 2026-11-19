@@ -1,7 +1,7 @@
 {
   "$schema": "vscode://schemas/color-theme",
   "name": "Shikkaku Mafia",
-  "type": "#a3adbd",
+  "type": "dark",
   "semanticHighlighting": true,
   "colors": {
     "focusBorder": "#b8343f99",
@@ -135,7 +135,7 @@
     "terminal.foreground": "#d9d2d3",
     "terminalCursor.foreground": "#b8343f",
     "terminal.selectionBackground": "#3d1d22",
-    "terminal.ansiBlack": "#1b181b",
+    "terminal.ansiBlack": "#4e474a",
     "terminal.ansiRed": "#dc5b66",
     "terminal.ansiGreen": "#a2b087",
     "terminal.ansiYellow": "#dcaf66",

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- Terminal black is readable on Agency and Mafia
+- Paper terminal colours fixed, bright colours are now deeper instead of paler
+- Theme files report dark or light properly
+
 ## 0.3.0
 
 - New light variant, Shikkaku Paper

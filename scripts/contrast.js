@@ -27,4 +27,18 @@ for (const p of Object.values(palettes)) {
     console.log(k.padEnd(10), p[k], r.toFixed(2) + flag)
   }
 }
+// terminal colours against the terminal background
+// black stays dim on dark themes and white on light ones, like most terminals
+for (const v of ['agency', 'mafia', 'paper']) {
+  const t = require(`../themes/shikkaku-${v}-color-theme.json`).colors
+  const bg = t['terminal.background']
+  const dim = require(`../themes/shikkaku-${v}-color-theme.json`).type === 'light' ? ['White', 'BrightWhite'] : ['Black']
+  for (const [k, c] of Object.entries(t)) {
+    if (!k.startsWith('terminal.ansi')) continue
+    const name = k.slice(13)
+    const min = dim.includes(name) ? (name === 'Black' ? 2 : 1) : name.startsWith('Bright') ? 3 : 4.5
+    const r = ratio(c.slice(0, 7), bg)
+    if (r < min) { low++; console.log(`${v} terminal ${name} ${r.toFixed(2)}  <-- low`) }
+  }
+}
 process.exit(low ? 1 : 0)

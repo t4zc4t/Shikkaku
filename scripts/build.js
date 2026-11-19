@@ -14,7 +14,7 @@ const sink = (c, t = 0.2) => mix(c, '#000000', t)
 
 
 function colors(p) {
-  const light = p.type === 'light'
+  const light = p.kind === 'light'
   // bright ansi goes lighter on dark themes, deeper on light ones
   const bright = c => (light ? sink(c) : lift(c))
   const shadow = light ? '#00000022' : '#00000066'
@@ -156,11 +156,11 @@ function colors(p) {
     'panelTitle.activeForeground': p.fg,
     'panelTitle.inactiveForeground': p.fgFaint,
 
-    'terminal.background': p.bgAlt,
+    'terminal.background': light ? p.bg : p.bgAlt,
     'terminal.foreground': p.fg,
     'terminalCursor.foreground': p.accent,
     'terminal.selectionBackground': p.selection,
-    'terminal.ansiBlack': light ? p.fg : p.bgRaised,
+    'terminal.ansiBlack': light ? p.fg : mix(p.bgRaised, p.fgFaint, 0.62),
     'terminal.ansiRed': p.red,
     'terminal.ansiGreen': p.green,
     'terminal.ansiYellow': p.yellow,
@@ -682,7 +682,7 @@ function build(p) {
   return {
     $schema: 'vscode://schemas/color-theme',
     name: p.name,
-    type: p.type,
+    type: p.kind,
     semanticHighlighting: true,
     colors: colors(p),
     tokenColors: tokens(p),

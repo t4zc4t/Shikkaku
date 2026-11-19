@@ -30,7 +30,7 @@ Three VS Code themes inspired by Dazai.
 Search for **Shikkaku** in the Extensions view once it's on the Marketplace or Open VSX, or download the `.vsix` from the [releases page](https://github.com/t4zc4t/Shikkaku/releases), then in VS Code open the Extensions view, click **...** and pick **Install from VSIX...**. Or from a terminal:
 
 ```
-code --install-extension shikkaku-0.3.0.vsix
+code --install-extension shikkaku-0.3.1.vsix
 ```
 
 Press `Ctrl+K Ctrl+T` (`Cmd+K Cmd+T` on macOS) and pick one of the three.
